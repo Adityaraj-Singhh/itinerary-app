@@ -11,6 +11,12 @@ def get_db():
     finally:
         db.close()
 
+
+@router.get("/")
+def read_root():
+    return {"message": "Hello, World!"}
+
+
 @router.post("/itinerary", response_model=schemas.ItineraryOut)
 def create_itinerary(itinerary: schemas.ItineraryCreate, db: Session = Depends(get_db)):
     db_itinerary = models.Itinerary(name=itinerary.name)
