@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://itinerary-app.onrender.com/",
+  baseURL: "https://itinerary-app.onrender.com",
 });
 
 export const getItinerary = (id) => API.get(`/itinerary/${id}`);
