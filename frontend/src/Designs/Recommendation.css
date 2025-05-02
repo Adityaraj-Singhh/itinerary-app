@@ -1,75 +1,94 @@
 .recommendation-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background: linear-gradient(to bottom right, #e1f5e3, #ffffff);
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .recommendation-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #2f855a;
-    margin-bottom: 30px;
-  }
-  
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.recommendation-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2f855a;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 640px) {
   .input-container {
-    display: flex;
-    gap: 20px;
+    flex-direction: row;
     justify-content: center;
-    margin-bottom: 30px;
   }
-  
-  .input-field {
-    width: 100%;
-    padding: 12px 16px;
-    font-size: 1rem;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.2s ease;
-  }
-  
-  .input-field:focus {
-    border-color: #38a169;
-  }
-  
-  .recommendation-button {
-    padding: 12px 24px;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    background-color: #38a169;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
-  .recommendation-button:hover {
-    background-color: #2f855a;
-  }
-  
-  .itinerary-container {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  }
-  
-  .itinerary-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2f855a;
-    margin-bottom: 20px;
-  }
-  
-  .itinerary-text {
-    font-size: 1rem;
-    color: #4a5568;
-    white-space: pre-line;
-  }
-  
+}
+
+.input-field {
+  flex: 1;
+  width: 100%;
+  max-width: 400px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-color: #38a169;
+  box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.3);
+}
+
+.recommendation-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #38a169;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.recommendation-button:hover {
+  background-color: #2f855a;
+  transform: translateY(-1px);
+}
+
+.itinerary-container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+.itinerary-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2f855a;
+  margin-bottom: 20px;
+}
+
+.itinerary-text {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+  white-space: pre-line;
+}
